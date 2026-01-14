@@ -15,6 +15,7 @@
 **Curly braces:** Must be on their own line.
 **Single-line if statements:** No curly braces.
 **Blank lines:** No whitespace on blank lines.
+**Indentation:** Use 4 spaces for indentation.
 
 ```javascript
 function example()
