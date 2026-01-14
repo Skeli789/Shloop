@@ -1,0 +1,15 @@
+
+body
+{
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    overflow: hidden;
+}
+
+html body.swal2-height-auto /* Fixes the pop-up destroying the layout */
+{
+    height: 100vh !important;
+}

@@ -1,0 +1,152 @@
+.header, .footer
+{
+    background-color: var(--theme);
+    height: 56px !important;
+    width: 100%;
+    flex-shrink: 0; /* Prevents header and footer from shrinking */
+}
+
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 100;
+}
+
+.logo-container
+{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-left: 1rem;
+}
+
+.logo-text
+{
+    margin: 0;
+    white-space: nowrap;
+}
+
+.header .buttons
+{
+    margin-right: 0.5rem;
+}
+
+.header .buttons .button
+{
+    color: white !important;
+}
+
+.footer
+{
+    background-color: var(--theme);
+    width: 100%;
+    flex-shrink: 0; /* Prevents header and footer from shrinking */
+    padding: 0.5rem 0;
+}
+
+.footer-content
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+    padding: 0 0.5rem;
+    justify-content: center;
+}
+
+.footer .logo
+{
+    flex: 0 0 auto;
+}
+
+.footer-links
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1 1 auto;
+    min-width: fit-content;
+}
+
+.footer .author
+{
+    flex: 0 0 auto;
+}
+
+@media (max-width: 767px)
+{
+    .footer-content
+    {
+        justify-content: space-between;
+    }
+    
+    .footer-links
+    {
+        flex-basis: 100%;
+        order: 3;
+    }
+}
+
+.footer-link
+{
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.footer-link:hover
+{
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.footer-separator
+{
+    color: white;
+    font-size: 0.85rem;
+}
+
+.footer .logo, .footer .author
+{
+    display: flex;
+    align-items: center;
+    color: white;
+    white-space: nowrap;
+}
+
+.footer .author
+{
+    margin-left: auto;
+}
+
+@media (max-width: 480px)
+{
+    .footer .logo, .footer .author 
+    {
+        font-size: 0.8rem;
+    }
+    
+    .footer-link
+    {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 350px)
+{
+    .footer .logo, .footer .author 
+    {
+        font-size: 0.65rem;
+    }
+    
+    .footer-link
+    {
+        font-size: 0.65rem;
+    }
+}

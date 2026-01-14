@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome against localhost",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMaps": true
+    },
+    {
+      "name": "Attach to Chrome",
+      "port": 9222,
+      "request": "attach",
+      "type": "chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMaps": true
+    },
+    // Launch yarn start in terminal
+    {
+      "name": "yarn start",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "yarn start",
+      "cwd": "${workspaceFolder}"
+    },
+    // Run current node file in terminal
+    {
+      "name": "Run Current File",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "node ${file}",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

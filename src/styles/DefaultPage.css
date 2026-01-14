@@ -1,0 +1,13 @@
+.default-page
+{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Basically height: 100% but doesn't mess up the header and footer */
+    padding: 20px; /* Add padding around the content */
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+.default-container
+{
+    align-items: center; /* Centre items horizontally */
+}
