@@ -4,8 +4,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const http = require('http').Server(app);
 const path = require('path');
-const { StatusCode } = require('status-code-enum');
 require('dotenv').config({ path: __dirname + '/.env' });
+
+const defaultRouter = require('./endpoints/default');
+// Import more endpoint routers here as needed
 
 const PORT = process.env.PORT || 3001;
 const buildPath = path.join(__dirname, '..', 'build');
@@ -15,6 +17,9 @@ app.use(bodyParser.json({}));
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(express.static(buildPath)); // Uncomment for production server
 
+app.use('/api/default', defaultRouter);
+// Add more endpoint routers here as needed
+
 // Start the server only if this file is run directly
 if (require.main === module)
 {
@@ -23,22 +28,6 @@ if (require.main === module)
         console.log(`Shloop server listening on ${PORT}`);
     });
 }
-
-
-// API Endpoints //
-
-/**
- * Sample API endpoint to test server functionality
- * @route GET /api/data
- * @returns {Object} 200 - Success message
- */
-app.get('/api/data', async (req, res) =>
-{
-    res.status(StatusCode.SuccessOK).send({ message: 'API is working!' });
-});
-
-// Add more endpoints here as needed
-
 
 // Production Server Routing //
 

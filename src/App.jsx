@@ -71,7 +71,7 @@ function App()
                             <Route path="/" element={<DefaultPage />} />
                             <Route path="*" element={<Navigate to={"/"} replace />} />
                         </Routes>
-                        <Footer darkMode={darkMode} />
+                        <Footer />
                     </div>
                     <ToastContainer 
                         position="bottom-right"

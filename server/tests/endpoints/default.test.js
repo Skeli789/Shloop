@@ -1,16 +1,16 @@
 /**
- * Test file for server.js
- * Tests the API endpoints to ensure they are working correctly
+ * Test file for default.js
+ * Tests the default API endpoints to ensure they are working correctly
  */
 
 const { expect } = require('chai');
 const request = require('supertest');
 const { StatusCode } = require('status-code-enum');
 
-const { app, http } = require('../server');
+const { app, http } = require('../../server');
 
 
-describe('Server API Endpoints', () =>
+describe('Default API Endpoints', () =>
 {
     after((done) =>
     {
@@ -20,12 +20,12 @@ describe('Server API Endpoints', () =>
             done();
     });
 
-    describe('GET /api/data', () =>
+    describe('GET /api/default/data', () =>
     {
         it('should return success message', async () =>
         {
             // Make request to the endpoint
-            const res = await request(app).get('/api/data');
+            const res = await request(app).get('/api/default/data');
 
             // Validate response
             expect(res.body).to.be.an('object');
