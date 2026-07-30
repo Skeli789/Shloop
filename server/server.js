@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const http = require('http').Server(app);
 const path = require('path');
@@ -13,8 +12,8 @@ const PORT = process.env.PORT || 3001;
 const buildPath = path.join(__dirname, '..', 'build');
 
 app.use(cors()); // Comment for production server
-app.use(bodyParser.json({}));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json({}));
+app.use(express.urlencoded({ extended: false }));
 // app.use(express.static(buildPath)); // Uncomment for production server
 
 app.use('/api/default', defaultRouter);
